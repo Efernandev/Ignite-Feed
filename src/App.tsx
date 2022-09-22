@@ -2,14 +2,18 @@
 import { Header } from "./components/Header";
 import { Sidebar } from "./components/Sidebar";
 import { Post } from "./components/Post";
-
+import { PostProps } from './components/Post'
 import styles from './App.module.css';
 import './global.css';
 // Author: { avatar_url: "", name="", office="" }
 // publishedAt: Date
 // Content: string
 
-const posts = [
+interface Posts extends PostProps {
+	id: number
+}
+
+const posts:Posts[] = [
 	{
 		id: 1,
 		author: {
